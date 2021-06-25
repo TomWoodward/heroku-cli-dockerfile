@@ -1,0 +1,8 @@
+cat >~/.netrc <<EOF
+machine api.heroku.com
+  login blank 
+  password $HEROKU_API_KEY
+machine git.heroku.com
+  login blank 
+  password $HEROKU_API_KEY
+EOF
