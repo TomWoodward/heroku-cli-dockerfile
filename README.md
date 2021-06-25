@@ -9,3 +9,10 @@ docker run \
   -w /code \
   $(docker build -q .) git-deploy
 ```
+
+or as a manual runtime for heroku commands
+```
+docker run $(docker build -q .) bash
+> heroku login -i # you can do this manually or provide HEROKU_API_KEY for automated scripts
+> heroku config:set -a my-cool-app FOOBAR=asdf
+```
